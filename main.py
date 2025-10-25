@@ -1,34 +1,73 @@
-from turtle import Turtle, colormode, done, Screen
 import random
-import colorgram
+from turtle import Turtle,Screen
 
-tom = Turtle()
+jack = Turtle()
 screen = Screen()
-screen.setup(width=600, height=600)
-screen.setworldcoordinates(0, 0, 600, 600)
-colormode(255)
-tom.speed("fastest")
-tom.penup()
-tom.hideturtle()
-colors = colorgram.extract("picture.jpg", 20)
-y = 25
-
-def random_color():
-    color = random.choice(colors).rgb
-    r, g, b = color.r, color.g, color.b
-    while True:
-        if r < 220 and g < 220 and b < 220:
-            return (r, g, b)
-        else:
-            return 101, 86, 183
+jack.speed("fastest")
+screen.setup(600,500)
+jack.penup()
+jack.hideturtle()
+x = -225
+y = -200
+colors = [
+    "ForestGreen",
+    "SlateBlue",
+    "OliveDrab",
+    "SteelBlue",
+    "RosyBrown",
+    "CadetBlue",
+    "DarkSeaGreen",
+    "Peru",
+    "MediumPurple",
+    "IndianRed",
+    "MediumSeaGreen",
+    "Sienna",
+    "DarkKhaki",
+    "MediumAquamarine",
+    "Tan",
+    "LightSlateGray",
+    "Teal",
+    "DarkSalmon",
+    "MediumSlateBlue",
+    "Burlywood",
+    "DarkCyan",
+    "Plum",
+    "SeaGreen",
+    "SandyBrown",
+    "PaleVioletRed",
+    "MediumTurquoise",
+    "Orchid",
+    "YellowGreen",
+    "LightCoral",
+    "CornflowerBlue",
+    "Wheat",
+    "MediumOrchid",
+    "DarkGray",
+    "LightSeaGreen",
+    "Thistle",
+    "Olive",
+    "PowderBlue",
+    "Coral",
+    "MediumSpringGreen",
+    "Salmon",
+    "DarkTurquoise",
+    "Khaki",
+    "PaleGreen",
+    "Crimson",
+    "SkyBlue",
+    "Goldenrod",
+    "MediumVioletRed",
+    "Turquoise",
+    "Chocolate",
+    "LightSteelBlue"
+]
 
 for _ in range(10):
-    tom.goto(25, y)
+    jack.goto(x, y)
     for _ in range(10):
-        tom.dot(20, random_color())
-        tom.forward(60)
-    y += 60
+        jack.dot(30,random.choice(colors))
+        jack.forward(50)
+    y += 45
 
 
-
-done()
+screen.exitonclick()
