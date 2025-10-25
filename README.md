@@ -8,7 +8,6 @@ This project was created as part of my ML/AI learning journey, inspired by the "
 
 ## Features
 
-- Extracts colors from any source image using the `colorgram` library
 - Generates a 10x10 grid of colored dots (100 dots total)
 - Filters out very light colors to maintain visual contrast
 - Creates a Damien Hirst-style spot painting automatically
@@ -16,19 +15,6 @@ This project was created as part of my ML/AI learning journey, inspired by the "
 ## Prerequisites
 
 Before running this project, make sure you have Python 3.x installed on your system.
-
-## Usage
-
-1. Place an image file named `picture.jpg` in the same directory as the script. This image will be used to extract the color palette.
-
-2. Run the program:
-```bash
-python main.py
-```
-
-3. A window will open displaying your generated spot painting!
-
-4. Close the window when you're done admiring your artwork.
 
 ## How It Works
 
